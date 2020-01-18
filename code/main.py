@@ -10,6 +10,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
+from keras.models import Sequential
+from keras.layers import Dense
 
 
 def pre_processing():
@@ -47,23 +49,39 @@ def train_test_validation(features, Y,  _test_size=0.15,_random_state=0):
     return (X_train, X_test, Y_train, Y_test)
 
 
-def classify(classifier, X_train, X_test, Y_train):
+def classify(classifier_name, X_train, X_test, Y_train):
     print("CLASSIFYING...")
-    if classifier == "Naive Bayes":
+    if classifier_name == "Naive Bayes":
         classifier = GaussianNB()
-    elif classifier == "Decision Tree":
+    elif classifier_name == "Decision Tree":
         classifier = DecisionTreeClassifier(criterion='entropy', random_state=0)
-    elif classifier == "Random Forest":
+    elif classifier_name == "Random Forest":
         classifier = RandomForestClassifier(n_estimators=40, criterion='entropy', random_state=0)
-    elif classifier == "K-Nearest Neighbour":
+    elif classifier_name == "K-Nearest Neighbour":
         classifier = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2)
-    elif classifier == "Logistic Regression":
+    elif classifier_name == "Logistic Regression":
         classifier = LogisticRegression()
-    elif classifier == "Support Vector Machines":
+    elif classifier_name == "Support Vector Machines":
         classifier = SVC(kernel='linear', random_state=1)
+    elif classifier_name == "Neural Networs":
+        classifier = Sequential()
+        classifier.add(Dense(units=8, activation='relu', input_dim=14))
+        classifier.add(Dense(units=8, activation='relu'))
+        classifier.add(Dense(units=1, activation='sigmoid'))
+        classifier.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    classifier.fit(X_train, Y_train)
-    predictions = classifier.predict(X_test)
+        #if we wanted to use scikit-learn
+        #classificador = MLPClassifier(verbose=True, max_iter=1000, tol=0.000010)
+
+    if classifier_name == "Neural Networks":
+        classifier.fit(X_train, Y_train, batch_size=10, epochs=100)
+        predictions = classifier.predict(X_test)
+        predictions = (predictions > 0.5)
+
+    else:
+        classifier.fit(X_train, Y_train)
+        predictions = classifier.predict(X_test)
+
     return predictions
 
 
@@ -79,7 +97,7 @@ def evaluate(predictions, Y_test):
 def main():
     features, Y = pre_processing()
     X_train, X_test, Y_train, Y_test = train_test_validation(features, Y)
-    classifiers = ["Naive Bayes", "Decision Tree", "Random Forest", "K-Nearest Neighbour", "Logistic Regression", "Support Vector Machines"]
+    classifiers = ["Naive Bayes", "Decision Tree", "Random Forest", "K-Nearest Neighbour", "Logistic Regression", "Support Vector Machines", "Neural Networks"]
 
     for classifier in classifiers:
         start_time = time.time()
