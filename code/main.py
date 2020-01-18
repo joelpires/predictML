@@ -7,7 +7,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
-
+from sklearn.linear_model import LogisticRegression
 def pre_processing():
     base = pd.read_csv('../data/census.csv')
 
@@ -51,6 +51,8 @@ def classify(classificador, previsores_treinamento, previsores_teste, classe_tre
         classificador = RandomForestClassifier(n_estimators=40, criterion='entropy', random_state=0)
     elif classificador == "K-Nearest Neighbour":
         classificador = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2)
+    elif classificador == "Logistic Regression":
+        classificador = LogisticRegression()
 
     classificador.fit(previsores_treinamento, classe_treinamento)
     previsoes = classificador.predict(previsores_teste)
@@ -67,7 +69,7 @@ def evaluate(previsoes, classe_teste):
 def main():
     previsores, classe = pre_processing()
     previsores_treinamento, previsores_teste, classe_treinamento, classe_teste = train_test_validation(previsores, classe)
-    classifiers = ["Naive Bayes", "Decision Tree", "Random Forest", "K-Nearest Neighbour"]
+    classifiers = ["Naive Bayes", "Decision Tree", "Random Forest", "K-Nearest Neighbour", "Logistic Regression"]
 
     for classifier in classifiers:
         previsoes = classify(classifier, previsores_treinamento, previsores_teste, classe_treinamento)
