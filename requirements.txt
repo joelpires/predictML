@@ -192,7 +192,6 @@ pydantic==1.3
 pydeck==0.2.0
 pyflakes==1.6.0
 Pygments==2.5.2
-PyInstaller==4.0.dev0+a9b299995
 pylint==1.7.2
 pymagnitude==0.1.120
 pyod==0.7.5
