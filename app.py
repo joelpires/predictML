@@ -1,7 +1,7 @@
 from flask import Flask,render_template,url_for,request
-from flask_bootstrap import Bootstrap 
-import pandas as pd 
-import numpy as np 
+from flask_bootstrap import Bootstrap
+import pandas as pd
+import numpy as np
 
 # ML Packages
 from sklearn.feature_extraction.text import CountVectorizer
@@ -22,12 +22,12 @@ def predict():
 	# Features and Labels
 	df_X = df.name
 	df_Y = df.sex
-    
+
     # Vectorization
 	corpus = df_X
 	cv = CountVectorizer()
-	X = cv.fit_transform(corpus) 
-	
+	X = cv.fit_transform(corpus)
+
 	# Loading our ML Model
 	naivebayes_model = open("models/naivebayesgendermodel.pkl","rb")
 	clf = joblib.load(naivebayes_model)
