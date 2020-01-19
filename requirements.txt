@@ -134,7 +134,6 @@ lz4==2.1.2
 Markdown==3.1.1
 MarkupSafe==1.1.1
 matplotlib==3.1.2
-menuinst==1.4.16
 midi==0.2.3
 mingus==0.5.1
 missingno==0.4.2
