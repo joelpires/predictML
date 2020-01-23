@@ -30,7 +30,7 @@ def pre_processing(dataset="census"):
     print("PRE-PROCESSING THE DATASET...")
 
 
-    data = pd.read_csv('../data/census.csv')
+    data = pd.read_csv('../data/census_original.csv')
     data = data[(data != '?').all(axis=1)]
 
     features = data.drop('income', axis=1).values
@@ -62,20 +62,24 @@ def pre_processing(dataset="census"):
         """
         labelencoder_previsores = LabelEncoder()
         features[:, 1] = labelencoder_previsores.fit_transform(features[:, 1])
-        features[:, 2] = labelencoder_previsores.fit_transform(features[:, 2])
         features[:, 3] = labelencoder_previsores.fit_transform(features[:, 3])
-        features[:, 4] = labelencoder_previsores.fit_transform(features[:, 4])
         features[:, 5] = labelencoder_previsores.fit_transform(features[:, 5])
         features[:, 6] = labelencoder_previsores.fit_transform(features[:, 6])
+        features[:, 7] = labelencoder_previsores.fit_transform(features[:, 7])
         features[:, 8] = labelencoder_previsores.fit_transform(features[:, 8])
+        features[:, 9] = labelencoder_previsores.fit_transform(features[:, 9])
+        features[:, 13] = labelencoder_previsores.fit_transform(features[:, 13])
 
-        onehotencoder = OneHotEncoder(categories="auto")
-        features = onehotencoder.fit_transform(features).toarray()
+        scaler = StandardScaler()
+        features = scaler.fit_transform(features)
+
+
 
 
     Y = data.income.values
     labelencoder_classe = LabelEncoder()
     Y = labelencoder_classe.fit_transform(Y)
+
 
     preprocesser = None
     return (preprocesser, features, Y)
@@ -133,7 +137,7 @@ def classify(classifier_name, preprocesser, features, Y):
         #pipe = make_pipeline(preprocesser, DenseTransformer(), classifier)
 
         classifier.fit(X_train, Y_train)
-        predictions = pipe.predict(X_test)
+        predictions = classifier.predict(X_test)
 
         precision = accuracy_score(Y_test, predictions)
         matrices.append(confusion_matrix(Y_test, predictions))
