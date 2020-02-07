@@ -11,7 +11,7 @@
       <div class="panel-body">
 
       	<form action="{{ url_for('predict')}}" method="POST">
-			<input type="text" placeholder="Age" name="age" style="width: 5%;">
+			<input type="text" placeholder="Age" style="width: 5%;" name="age">
             <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
               <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
                       onchange="document.getElementById('workclass').value=this.options[this.selectedIndex].text; document.getElementById('workclass').value=this.options[this.selectedIndex].value;">
@@ -119,11 +119,11 @@
                      style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
             </div>
 
-            <input type="text" placeholder="Hours per Week" name="hour-per-week" style="width: 5%;">
+            <input type="text" placeholder="Hours per Week" name="hours_per_week" style="width: 5%;">
 
             <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
               <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
-                      onchange="document.getElementById('native-country').value=this.options[this.selectedIndex].text; document.getElementById('native-country').value=this.options[this.selectedIndex].value;">
+                      onchange="document.getElementById('native_country').value=this.options[this.selectedIndex].text; document.getElementById('native_country').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Cambodia">Cambodia</option>
                 <option value="Canada">Canada</option>
@@ -152,7 +152,7 @@
                 <option value="Laos">Laos</option>
                 <option value="Mexico">Mexico</option>
                 <option value="Nicaragua">Nicaragua</option>
-                <option value="Outlying­-US(Guam-­USVI-­etc)">Outlying­ US(Guam-­USVI-­etc)</option>
+                <option value="Outlying-US(Guam-USVI-etc)">Outlying­ US(Guam-­USVI-­etc)</option>
                 <option value="Peru">Peru</option>
                 <option value="Philippines">Philippines</option>
                 <option value="Poland">Poland</option>
@@ -166,13 +166,13 @@
                 <option value="Vietnam">Vietnam</option>
                 <option value="Yugoslavia">Yugoslavia</option>
               </select>
-              <input type="text" name="native-country" id="native-country"
+              <input type="text" name="native_country" id="native_country"
                      placeholder="Native Country" onfocus="this.select()"
                      style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
             </div>
             <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
               <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
-                      onchange="document.getElementById('classifer').value=this.options[this.selectedIndex].text; document.getElementById('classifer').value=this.options[this.selectedIndex].value;">
+                      onchange="document.getElementById('classifier').value=this.options[this.selectedIndex].text; document.getElementById('classifier').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Ensemble Method">Ensemble Method</option>
                 <option value="Naive Bayes">Naive Bayes</option>
@@ -183,29 +183,62 @@
                 <option value="Support Vector Machines">Support Vector Machines</option>
                 <option value="Neural Networks">Neural Networks</option>
               </select>
-              <input type="text" name="classifer" id="classifer"
-                     placeholder="Classifer" onfocus="this.select()"
+              <input type="text" name="classifier" id="classifier"
+                     placeholder="Classifier" onfocus="this.select()"
                      style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
             </div>
-            <input type="text" name="namequery" id="namequery">
-            <button type="submit" class="btn btn-primary">Classify</button>
+            <button type="submit" name="namequery" class="btn btn-primary">Classify</button>
 		</form>
 
+
+
+
+
+
         <div>
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Age:</u> Positive Integer
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Age:</u> Positive Integer (0-99)
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Workclass:</u> Private, Self Employed Not Incorporated, Self Employed Incorporated, Federal Government, Local Government, State Government, Without Pay, Never Worked
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Education:</u> Preschool, 1st-4th, 5th-6th, 7th-8th, 9th, 10th, 11th, 12th, High School Graduated, Professor at School, Associate Acdm, Associate Voc, Some College, Bachelors, Masters, Doctorate
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Marital Status:</u> Married, Civilian Spouse, Married, Air Force Spouse, Married but spouse ­absent, Divorced, Never Married, Separated, Widowed
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Occupation:</u> Tech Support, Craft Repair, Armed Forces, Sales, Executive/Management, Handlers/Cleaners, Machine Inspector, Clerical, Farming/Fishing, Transport Moving, Profissional Specialty, Private House Service, Protective Service, Other Service
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Race:</u> Caucasian, African, Asian/Pacific/Islander, American/Indian/Eskimo, Other.
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Sex:</u> Female, Male.
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Hours per Week:</u> Positive Integer
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Hours per Week:</u> Positive Integer (0-50)
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Native country:</u> United-­States, Cambodia, England, Puerto ­Rico, Canada, Germany, Outlying­ US(Guam-­USVI-­etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El­ Salvador, Trinadad&Tobago, Peru, Hong, Holand­-Netherlands
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Classifier Algorithm:</u> Ensemble Method, Naive Bayes, Decision Tree, Random Forest, K-Nearest Neighbour, Logistic Regression, Support Vector Machines, Neural Networks
+            <br></br>
+            <p style="line-height:10px;margin:0px;"><br></p>| <b>Every time a field is not filled or od does not respect the boundary values, the algorithm will assume the mode values of the US census for each respective field.
         </div>
 
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -305,6 +338,7 @@
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Longitude: </u>e.g. -122.257
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Predictive Algorithm: </u>Simple Regression, Polinomial Regression, Random Forest, Support Vector Machines, Neural Networks
         </div>
+
 
 
   </div>
