@@ -8,22 +8,22 @@ You can fork this and just run `flask run`.
 
 It covers ML that can go from the basic concepts to the most advanced ones. All this can be seen more in detail in the files `census.ipynb` and `houses.ipynb`. The list below will discriminate the main concepts covered in this project:
 
-#### Exploratory Analysis
+### Exploratory Analysis
 - **Boxplots**
 - **Scatters**
 - **Distribution Bars**
 - **...**
 
-#### Data Cleaning
+### Data Cleaning
 - **Missing Values**
-- ##### Non-sense Values
-- ##### Duplicates
-- ##### Outliers (Boxplots, Tukey Method, etc.)
-- ##### Skewness
-- ##### Oversampling/Undersampling
+- **Non-sense Values**
+- **Duplicates**
+- **Outliers (Boxplots, Tukey Method, etc.)**
+- **Skewness**
+- **Oversampling/Undersampling**
     - **SMOTE**
     - **Random**
-- ###### ...
+- **...
 
 #### Feature Transformation
 - ##### Label Encoding
