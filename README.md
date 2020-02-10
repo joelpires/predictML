@@ -25,83 +25,83 @@ It covers ML that can go from the basic concepts to the most advanced ones. All 
     - **Random**
 - **...
 
-#### Feature Transformation
-- ##### Label Encoding
-- ##### One Hot Encoding
-- ##### Standardization
-- ##### Normalization
-- ##### Binning
-- ##### ...
+### Feature Transformation
+- **Label Encoding**
+- **One Hot Encoding**
+- **Standardization**
+- **Normalization**
+- **Binning**
+- **...**
 
-#### Feature Creation
-- ##### Deep Feature Synthesis
-- ##### ...
+### Feature Creation
+- **Deep Feature Synthesis**
+- **...**
 
-#### Feature Selection/Dimensionality Reduction
-- ###### Pearson Correlations
-- ###### Uncertainty coefficient matrix + Anova (for categorical/numerical correlations)
-- ###### PCA
-- ###### T-SNE
-- ###### Collinearity Study
-- ###### Wrapper Methods
-- ###### Embedded Methods
-- ###### Backward Elimination
-- ###### Filter Method
-- ###### Forward Selection
-- ###### Recursive Elimination
-- ###### SelectKBest
-- ###### Extra Trees
+### Feature Selection/Dimensionality Reduction
+- **Pearson Correlations**
+- **Uncertainty coefficient matrix + Anova (for categorical/numerical correlations)**
+- **PCA**
+- **T-SNE**
+- **Collinearity Study**
+- **Wrapper Methods**
+- **Embedded Methods**
+- **Backward Elimination**
+- **Filter Method**
+- **Forward Selection**
+- **Recursive Elimination**
+- **SelectKBest**
+- **Extra Trees**
 
-#### Shuffle and Split Data
+### Shuffle and Split Data
 
-#### Classifiers
-- ##### Base Learners
-    - ###### Ranfom Forest
-    - ###### Decision Tree
-    - ###### Naive Bayes
-    - ###### K-Nearest Neighbour
-    - ###### Logistic Regression
-    - ###### Support Vector Machines
-    - ###### Linear Discriminant Analysis
-    - ###### Stochastic Gradient Descent
-    - ###### Neural Networks
+### Classifiers
+- **Base Learners**
+    - **Ranfom Forest**
+    - **Decision Tree**
+    - **Naive Bayes**
+    - **K-Nearest Neighbour**
+    - **Logistic Regression**
+    - **Support Vector Machines**
+    - **Linear Discriminant Analysis**
+    - **Stochastic Gradient Descent**
+    - **Neural Networks**
 
-- ##### Ensemble Learners - with a previous study of the correlation among the predictions of the base learers
-    - ###### Voting (Soft + Hard) - different combinations of the base learners
-    - ###### Bagging
-    - ###### Stacking
-    - ###### Blending - different combinations of the base learners
-    - ###### Boosting
+- **Ensemble Learners** - with a previous study of the correlation among the predictions of the base learers
+    - **Voting (Soft + Hard) - different combinations of the base learners**
+    - **Bagging**
+    - **Stacking**
+    - **Blending** - different combinations of the base learners
+    - **Boosting**
         - **AdaBoost**
         - **Gradient Boosting**
         - **CATBoost**
         - **XGBoost**
 
-#### Regressors
-- ##### Base Learners
-    - ###### Ranfom Forest
-    - ###### Linear Regression + Ridge
-    - ###### Linear Regression + Lasso
-    - ###### Support Vector Regressor
+### Regressors
+- **Base Learners**
+    - **Ranfom Forest**
+    - **Linear Regression + Ridge**
+    - **Linear Regression + Lasso**
+    - **Support Vector Regressor**
 
-- ##### Ensemble Learners - with a previous study of the correlation among the predictions of the base learers
-    - ###### Voting (Soft + Hard) - different combinations of the base learners
-    - ###### Bagging
-    - ###### Stacking
-    - ###### Blending - different combinations of the base learners
-    - ###### Boosting
+- **Ensemble Learners** - with a previous study of the correlation among the predictions of the base learers
+    - **Voting (Soft + Hard)** - different combinations of the base learners
+    - **Bagging**
+    - **Stacking**
+    - **Blending** - different combinations of the base learners
+    - **Boosting**
         - **AdaBoost Regressor**
         - **GraBoost Regressor**
         - **CATBoost Regressor**
         - **XGBoost Regressor**
 
-#### Parameter Tuning of the Models
-- ###### Random Search
-- ###### Grid Search
-- ###### Prunning Trees
+### Parameter Tuning of the Models
+- **Random Search**
+- **Grid Search**
+- **Prunning Trees**
 
-#### Performance Metrics (Charts and Statistics)
-- ###### Classification
+### Performance Metrics (Charts and Statistics)
+- **Classification**
     - **Accuracies**
     - **Precision**
     - **Recalls**
@@ -110,28 +110,28 @@ It covers ML that can go from the basic concepts to the most advanced ones. All 
     - **ROC Curves**
     - **AUCs**
     - **Precision-Recall Curves**
-- ###### Regression
+- **Regression**
     - **MSEs**
     - **MAEs**
     - **RMSEs**
     - **R-Squareds**
 
-#### Overfitting/Underfitting Study:
-- ###### Charts with Test Scores Throughout Different Training Sizes
-- ###### Charts with Test Scores vs Cross Validation Scores vs Training Scores
+### Overfitting/Underfitting Study:
+- **Charts with Test Scores Throughout Different Training Sizes**
+- **Charts with Test Scores vs Cross Validation Scores vs Training Scores**
 
 
-#### Statistical Testing of the Results
-- ###### 30 Runs
-- ###### Ranking the Algorithms
-- ###### Friedman Test
-- ###### Nemenyi Test
+### Statistical Testing of the Results
+- **30 Runs**
+- **Ranking the Algorithms**
+- **Friedman Test**
+- **Nemenyi Test**
 
-#### Interpretability/Explainability
-- ##### Feature Importance
-- ##### Permutation Importance
-- ##### SHAP Values
+### Interpretability/Explainability
+- **Feature Importance**
+- **Permutation Importance**
+- **SHAP Values**
 
-#### Making Pipelines and Prepare to Predict on new Data
+### Making Pipelines and Prepare to Predict on new Data
 
 #### Deployment of the ML Models in an Web App Online
