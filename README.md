@@ -15,7 +15,7 @@ It covers ML that can go from the basic concepts to the most advanced ones. All 
 - **...**
 
 #### Data Cleaning
-- ##### Missing Values
+- **Missing Values**
 - ##### Non-sense Values
 - ##### Duplicates
 - ##### Outliers (Boxplots, Tukey Method, etc.)
