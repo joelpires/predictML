@@ -1,7 +1,8 @@
 {% extends "bootstrap/base.html" %}
 {% block content %}
-<b><a style="position: absolute;top: 0.3%;left: 13.5%;" href="{{ url_for('index') }}">Back to Home</a></b>
-<b><p style="font-size:130%; position: absolute;top: 2%;left: 0.5%;">Results of the Friedman and Nemenyi Statistical Tests Over 30 Runs of All the Algorithms</p></b>
+<body style="background-color:#FFFFFF;">
+<b><a style="font-size:100%; position: absolute;top: 0.3%;left: 13.5%;" href="{{ url_for('index') }}">Back to Home</a></b>
+<b><p style="font-size:130%; position: absolute;top: 2%;left: 0.1%;">Results of the Friedman and Nemenyi Statistical Tests Over 30 Runs of All the Algorithms</p></b>
 <textarea style="display: inline;position: absolute;top: 5%;left: 0%; overflow-y: scroll;
 	width: 33.3%;
     height: 37.8%;">
@@ -98,3 +99,4 @@
 <link rel="stylesheet"
       href="{{url_for('.static', filename='css/styles.css')}}">
 {% endblock %}
+</body>
