@@ -11,31 +11,31 @@ It covers ML that can go from the basic concepts to the most advanced ones. All 
 #### Exploratory Analysis
 - **Boxplots**
 - **Scatters**
-- **Distributions**
+- **Distribution Bars**
 - **...**
 
 #### Data Cleaning
-- ###### Missing Values
-- ###### Non-sense Values
-- ###### Duplicates
-- ###### Outliers (Boxplots, Tukey Method, etc.)
-- ###### Skewness
-- ###### Oversampling/Undersampling
+- ##### Missing Values
+- ##### Non-sense Values
+- ##### Duplicates
+- ##### Outliers (Boxplots, Tukey Method, etc.)
+- ##### Skewness
+- ##### Oversampling/Undersampling
     - **SMOTE**
     - **Random**
 - ###### ...
 
 #### Feature Transformation
-- ###### Label Encoding
-- ###### One Hot Encoding
-- ###### Standardization
-- ###### Normalization
-- ###### Binning
-- ###### ...
+- ##### Label Encoding
+- ##### One Hot Encoding
+- ##### Standardization
+- ##### Normalization
+- ##### Binning
+- ##### ...
 
 #### Feature Creation
-- ###### Deep Feature Synthesis
-- ###### ...
+- ##### Deep Feature Synthesis
+- ##### ...
 
 #### Feature Selection/Dimensionality Reduction
 - ###### Pearson Correlations
