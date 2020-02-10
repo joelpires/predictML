@@ -1,0 +1,139 @@
+Algorithm CAT is statistically way much better than AdaBoost
+Algorithm DT is statistically way much better than AdaBoost
+Algorithm CAT is statistically way much better than GraBoost
+Algorithm DT is statistically way much better than GraBoost
+Algorithm KNN is statistically way much better than AdaBoost
+Algorithm KNN is statistically way much better than GraBoost
+Algorithm CAT is statistically way much better than LDA
+Algorithm DT is statistically way much better than LDA
+Algorithm GraBoost is statistically way much better than LDA
+Algorithm KNN is statistically way much better than LDA
+Algorithm CAT is statistically way much better than Logistic Regression
+Algorithm DT is statistically way much better than Logistic Regression
+Algorithm KNN is statistically way much better than Logistic Regression
+Algorithm MLP is statistically way much better than AdaBoost
+Algorithm MLP is statistically way much better than GraBoost
+Algorithm MLP is statistically way much better than LDA
+Algorithm MLP is statistically way much better than Logistic Regression
+Algorithm AdaBoost is statistically way much better than Naive Bayes
+Algorithm CAT is statistically way much better than Naive Bayes
+Algorithm DT is statistically way much better than Naive Bayes
+Algorithm GraBoost is statistically way much better than Naive Bayes
+Algorithm KNN is statistically way much better than Naive Bayes
+Algorithm Logistic Regression is statistically better than Naive Bayes
+Algorithm MLP is statistically way much better than Naive Bayes
+Algorithm CAT is statistically way much better than Random Forest
+Algorithm DT is statistically way much better than Random Forest
+Algorithm GraBoost is statistically way much better than Random Forest
+Algorithm KNN is statistically way much better than Random Forest
+Algorithm MLP is statistically way much better than Random Forest
+Algorithm CAT is statistically way much better than SGD
+Algorithm DT is statistically way much better than SGD
+Algorithm GraBoost is statistically better than SGD
+Algorithm KNN is statistically way much better than SGD
+Algorithm MLP is statistically way much better than SGD
+Algorithm SVC is statistically better than AdaBoost
+Algorithm KNN is statistically better than SVC
+Algorithm SVC is statistically way much better than LDA
+Algorithm SVC is statistically way much better than Logistic Regression
+Algorithm SVC is statistically way much better than Naive Bayes
+Algorithm SVC is statistically way much better than Random Forest
+Algorithm SVC is statistically way much better than SGD
+Algorithm AdaBoost is statistically better than SoftVoter_2_best
+Algorithm CAT is statistically way much better than SoftVoter_2_best
+Algorithm DT is statistically way much better than SoftVoter_2_best
+Algorithm GraBoost is statistically way much better than SoftVoter_2_best
+Algorithm KNN is statistically way much better than SoftVoter_2_best
+Algorithm MLP is statistically way much better than SoftVoter_2_best
+Algorithm SVC is statistically way much better than SoftVoter_2_best
+Algorithm CAT is statistically way much better than SoftVoter_3_best
+Algorithm DT is statistically way much better than SoftVoter_3_best
+Algorithm KNN is statistically way much better than SoftVoter_3_best
+Algorithm SoftVoter_3_best is statistically way much better than LDA
+Algorithm MLP is statistically way much better than SoftVoter_3_best
+Algorithm SoftVoter_3_best is statistically way much better than Naive Bayes
+Algorithm SoftVoter_3_best is statistically way much better than Random Forest
+Algorithm SoftVoter_3_best is statistically way much better than SoftVoter_2_best
+Algorithm CAT is statistically better than SoftVoter_4_best
+Algorithm DT is statistically way much better than SoftVoter_4_best
+Algorithm KNN is statistically way much better than SoftVoter_4_best
+Algorithm SoftVoter_4_best is statistically way much better than LDA
+Algorithm MLP is statistically better than SoftVoter_4_best
+Algorithm SoftVoter_4_best is statistically way much better than Naive Bayes
+Algorithm SoftVoter_4_best is statistically way much better than Random Forest
+Algorithm SoftVoter_4_best is statistically way much better than SGD
+Algorithm SoftVoter_4_best is statistically way much better than SoftVoter_2_best
+Algorithm CAT is statistically way much better than SoftVoter_5_best
+Algorithm DT is statistically way much better than SoftVoter_5_best
+Algorithm KNN is statistically way much better than SoftVoter_5_best
+Algorithm SoftVoter_5_best is statistically better than LDA
+Algorithm MLP is statistically way much better than SoftVoter_5_best
+Algorithm SoftVoter_5_best is statistically way much better than Naive Bayes
+Algorithm SoftVoter_5_best is statistically way much better than Random Forest
+Algorithm SoftVoter_5_best is statistically way much better than SoftVoter_2_best
+Algorithm XGB is statistically way much better than AdaBoost
+Algorithm XGB is statistically way much better than LDA
+Algorithm XGB is statistically way much better than Logistic Regression
+Algorithm XGB is statistically way much better than Naive Bayes
+Algorithm XGB is statistically way much better than Random Forest
+Algorithm XGB is statistically way much better than SGD
+Algorithm XGB is statistically way much better than SoftVoter_2_best
+Algorithm XGB is statistically better than SoftVoter_3_best
+Algorithm XGB is statistically way much better than SoftVoter_5_best
+Algorithm DT is statistically better than bagging
+Algorithm KNN is statistically way much better than bagging
+Algorithm bagging is statistically way much better than LDA
+Algorithm bagging is statistically way much better than Logistic Regression
+Algorithm bagging is statistically way much better than Naive Bayes
+Algorithm bagging is statistically way much better than Random Forest
+Algorithm bagging is statistically way much better than SGD
+Algorithm bagging is statistically way much better than SoftVoter_2_best
+Algorithm CAT is statistically way much better than blending_2_best
+Algorithm DT is statistically way much better than blending_2_best
+Algorithm KNN is statistically way much better than blending_2_best
+Algorithm MLP is statistically way much better than blending_2_best
+Algorithm SVC is statistically way much better than blending_2_best
+Algorithm SoftVoter_4_best is statistically better than blending_2_best
+Algorithm XGB is statistically way much better than blending_2_best
+Algorithm bagging is statistically way much better than blending_2_best
+Algorithm CAT is statistically way much better than blending_3_best
+Algorithm DT is statistically way much better than blending_3_best
+Algorithm GraBoost is statistically way much better than blending_3_best
+Algorithm KNN is statistically way much better than blending_3_best
+Algorithm MLP is statistically way much better than blending_3_best
+Algorithm SVC is statistically way much better than blending_3_best
+Algorithm SoftVoter_3_best is statistically better than blending_3_best
+Algorithm SoftVoter_4_best is statistically way much better than blending_3_best
+Algorithm XGB is statistically way much better than blending_3_best
+Algorithm bagging is statistically way much better than blending_3_best
+Algorithm CAT is statistically way much better than blending_4_best
+Algorithm DT is statistically way much better than blending_4_best
+Algorithm KNN is statistically way much better than blending_4_best
+Algorithm blending_4_best is statistically way much better than LDA
+Algorithm MLP is statistically way much better than blending_4_best
+Algorithm blending_4_best is statistically way much better than Naive Bayes
+Algorithm blending_4_best is statistically way much better than Random Forest
+Algorithm blending_4_best is statistically better than SGD
+Algorithm blending_4_best is statistically way much better than SoftVoter_2_best
+Algorithm blending_4_best is statistically way much better than blending_3_best
+Algorithm DT is statistically better than blending_5_best
+Algorithm KNN is statistically way much better than blending_5_best
+Algorithm blending_5_best is statistically way much better than LDA
+Algorithm blending_5_best is statistically way much better than Logistic Regression
+Algorithm blending_5_best is statistically way much better than Naive Bayes
+Algorithm blending_5_best is statistically way much better than Random Forest
+Algorithm blending_5_best is statistically way much better than SGD
+Algorithm blending_5_best is statistically way much better than SoftVoter_2_best
+Algorithm blending_5_best is statistically way much better than blending_2_best
+Algorithm blending_5_best is statistically way much better than blending_3_best
+Algorithm stacking is statistically way much better than AdaBoost
+Algorithm stacking is statistically way much better than LDA
+Algorithm stacking is statistically way much better than Logistic Regression
+Algorithm stacking is statistically way much better than Naive Bayes
+Algorithm stacking is statistically way much better than Random Forest
+Algorithm stacking is statistically way much better than SGD
+Algorithm stacking is statistically way much better than SoftVoter_2_best
+Algorithm stacking is statistically better than SoftVoter_3_best
+Algorithm stacking is statistically way much better than SoftVoter_5_best
+Algorithm stacking is statistically way much better than blending_2_best
+Algorithm stacking is statistically way much better than blending_3_best

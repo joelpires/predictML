@@ -1,16 +1,16 @@
 {% extends "bootstrap/base.html" %}
 {% block content %}
 
-<div class="panel-heading" align="center" class="jumbotron" style="background-color:#E5E5FF !important; height: 100px; width: 100%; margin: 0;">
-    <h2 style="line-height: 70px;">Classify Annual Income Based on Socio-Economic Information of People (<=50K or >50K dollars)</h2>
+<div class="panel-heading" align="center" class="jumbotron" style="background-color:#E5E5FF !important; height: 72px; width: 100%; margin: 0;">
+    <h2 style="line-height: 30px;">Classify Annual Income of US Citizens Based on their Socio-Economic Information (<=50K or >50K dollars)</h2>
 </div>
 
 <div class="panel-group">
     <div class="panel panel-primary">
-      <div class="panel-heading" style="background-color:#7F0000 ">Insert Features</div>
-      <div class="panel-body">
+      <div class="panel-heading" style="background-color:#7F0000 ">Insert Features and the Chosen Classifier Algorithm:</div>
+      <div class="panel-body" >
 
-      	<form action="{{ url_for('predict')}}" method="POST">
+      	<form action="{{ url_for('classify')}}" method="POST" style="display: inline-block;margin-right: -155px;" >
 			<input type="text" placeholder="Age" style="width: 5%;" name="age">
             <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
               <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
@@ -170,25 +170,50 @@
                      placeholder="Native Country" onfocus="this.select()"
                      style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:220px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
+              <select style="position:absolute;top:8px;left:0px;width:220px; height:27px;line-height:20px;margin:0;padding:0;"
                       onchange="document.getElementById('classifier').value=this.options[this.selectedIndex].text; document.getElementById('classifier').value=this.options[this.selectedIndex].value;">
+
                 <option></option>
-                <option value="Ensemble Method">Ensemble Method</option>
-                <option value="Naive Bayes">Naive Bayes</option>
-                <option value="Decision Tree">Decision Tree</option>
                 <option value="Random Forest">Random Forest</option>
-                <option value="K-Nearest Neighbour">K-Nearest Neighbour</option>
+                <option value="DT">Decision Tree</option>
+                <option value="Naive Bayes">Naive Bayes</option>
+                <option value="KNN">K-Nearest Neighbour</option>
                 <option value="Logistic Regression">Logistic Regression</option>
-                <option value="Support Vector Machines">Support Vector Machines</option>
-                <option value="Neural Networks">Neural Networks</option>
+                <option value="SVC">Support Vector Machines</option>
+                <option value="LDA">Linear Discriminant Analysis</option>
+                <option value="SGD">Stochastic Gradient Descent</option>
+                <option value="MLP">Neural Networks</option>
+                <option value="bagging">Bagging</option>
+                <option value="stacking">Stacking</option>
+                <option value="AdaBoost">AdaBoost</option>
+                <option value="GraBoost">GraBoost</option>
+                <option value="XGB">XGBoost</option>
+                <option value="CAT">CATBoost</option>
+                <option value="blending_2_best">Ensemble Blend 2 Best</option>
+                <option value="blending_3_best">Ensemble Blend 3 Best</option>
+                <option value="blending_4_best">Ensemble Blend 4 Best</option>
+                <option value="blending_5_best">Ensemble Blend 5 Best</option>
+                <option value="SoftVoter_2_best">Ensemble Soft Voter 2 Best</option>
+                <option value="SoftVoter_3_best">Ensemble Soft Voter 3 Best</option>
+                <option value="SoftVoter_4_best">Ensemble Soft Voter 4 Best</option>
+                <option value="SoftVoter_5_best">Ensemble Soft Voter 5 Best</option>
+
+
               </select>
+
+
+
               <input type="text" name="classifier" id="classifier"
                      placeholder="Classifier" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                     style="position:absolute;top:8px;left:0px;width:200px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
             </div>
-            <button type="submit" name="namequery" class="btn btn-primary">Classify</button>
+            <button style="display: inline-block;margin-left:5px;" type="submit" name="namequery" class="btn btn-primary">Classify</button>
+
 		</form>
+
+        <form style="display: inline-block;margin-left:-5px;" action="{{ url_for('compare_classifiers')}}" method="POST"><button   type="submit" name="button1" class="btn btn-primary">Compare the Different Classifiers</button></form>
+
 
 
 
@@ -206,11 +231,15 @@
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Sex:</u> Female, Male.
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Hours per Week:</u> Positive Integer (0-50)
             <p style="line-height:10px;margin:0px;"><br></p>| <u>Native country:</u> United-­States, Cambodia, England, Puerto ­Rico, Canada, Germany, Outlying­ US(Guam-­USVI-­etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El­ Salvador, Trinadad&Tobago, Peru, Hong, Holand­-Netherlands
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Classifier Algorithm:</u> Ensemble Method, Naive Bayes, Decision Tree, Random Forest, K-Nearest Neighbour, Logistic Regression, Support Vector Machines, Neural Networks
+
+
             <br></br>
-            <p style="line-height:10px;margin:0px;"><br></p> <b>Every time a field is not filled or it does not respect the boundary values, the algorithm will assume the mode values of the US census for each respective field.
-            <p style="line-height:10px;margin:0px;"><br></p> <b>Detail of the code and all the analysis behind this app can be seen here:</b>
+            <p style="line-height:10px;margin:0px;"><br></p> <b>Every time a field is not filled or it does not respect the boundary values, the algorithm will assume the mode values of the US census for each respective field. The default classifier will be the Random Forest Classifier.</b>
+            <p style="line-height:10px;margin:0px;"><br></p> <b>Detail of the code and all the analysis behind this app can be seen <a href="https://github.com/joelpires/predictML/blob/master/census.ipynb">here</a>.</b>
+            <p style="line-height:10px;margin:0px;"><br></p> <b>The dataset that I used to train the algorithms was <a href="https://archive.ics.uci.edu/ml/datasets/Adult">this</a>.</b>
+
         </div>
+
 
   </div>
 </div>
@@ -237,108 +266,123 @@
 
 
 
-
-
-
-
-
-
-
-<div class="panel-heading" align="center" class="jumbotron" style="background-color:#E5E5FF !important; height: 151px; width: 100%; margin: 0;">
-    <h2 style="line-height: 150px;">Predict the Price of Houses</h2>
+<div class="panel-heading" align="center" class="jumbotron" style="background-color:#E5E5FF !important; height: 80px; width: 100%; margin: 0;">
+    <h2 style="line-height: 45px;">Predict the Price of US Citizens' Houses Based on their Features</h2>
 </div>
 <div class="panel-group">
     <div class="panel panel-primary">
-      <div class="panel-heading" style="background-color:#7F0000 ">Insert Features</div>
-      <div class="panel-body">
+      <div class="panel-heading" style="background-color:#7F0000 ">Insert Features and the Chosen Predictive Algorithm:</div>
+      <div class="panel-body" style="display: inline;" >
 
-      	<form align="center" action="{{ url_for('predict')}}" method="POST">
-            <input type="text" placeholder="Bedrooms" name="bedrooms" style="width: 9%;">
-            <input type="text" placeholder="Bathrooms" name="bathrooms" style="width: 9%;">
-            <input type="text" placeholder="Square Feet Living" name="sqft_living" style="width: 9%;">
-            <input type="text" placeholder="Square Feet Lot" name="sqft_lot" style="width: 9%;">
-            <input type="text" placeholder="Floors" name="floors" style="width: 9%;">
+      	<form action="{{ url_for('predict')}}" method="POST" style="display: inline-block;margin-left: 15px; " >
+            <input type="text" placeholder="Lot Area" name="LotArea" style="width: 7%;">
             <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
               <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
-                      onchange="document.getElementById('waterfront').value=this.options[this.selectedIndex].text; document.getElementById('waterfront').value=this.options[this.selectedIndex].value;">
+                      onchange="document.getElementById('Street').value=this.options[this.selectedIndex].text; document.getElementById('Street').value=this.options[this.selectedIndex].value;">
                 <option></option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
+                <option value="Pave">Pave</option>
+                <option value="Grvl">Gravel</option>
               </select>
-              <input type="text" name="waterfront" id="waterfront"
-                     placeholder="Waterfront" onfocus="this.select()"
+              <input type="text" name="Street" id="Street"
+                     placeholder="Access Type" onfocus="this.select()"
                      style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
-              <input name="waterfront" id="waterfront" type="hidden">
+              <input name="Street" id="Street" type="hidden">
             </div>
+
+
+            <input type="text" placeholder="Year Built" name="YearBuilt" style="width: 7%;">
+
             <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
               <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
-                      onchange="document.getElementById('view').value=this.options[this.selectedIndex].text; document.getElementById('view').value=this.options[this.selectedIndex].value;">
+                      onchange="document.getElementById('RoofStyle').value=this.options[this.selectedIndex].text; document.getElementById('RoofStyle').value=this.options[this.selectedIndex].value;">
                 <option></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="Gable">Gable</option>
+                <option value="Hip">Hip</option>
+                <option value="Gambrel">Gambrel</option>
+                <option value="Mansard">Mansard</option>
+                <option value="Flat">Flat</option>
+                <option value="Shed">Shed</option>
               </select>
-              <input type="text" name="view" id="view"
-                     placeholder="View" onfocus="this.select()"
+              <input type="text" name="RoofStyle" id="RoofStyle"
+                     placeholder="Roof Style" onfocus="this.select()"
                      style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
-              <input name="view" id="view" type="hidden">
+              <input name="RoofStyle" id="RoofStyle" type="hidden">
             </div>
+
+
+
+
             <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
               <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
-                      onchange="document.getElementById('condition').value=this.options[this.selectedIndex].text; document.getElementById('condition').value=this.options[this.selectedIndex].value;">
+                      onchange="document.getElementById('CentralAir').value=this.options[this.selectedIndex].text; document.getElementById('CentralAir').value=this.options[this.selectedIndex].value;">
                 <option></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="Y">Yes</option>
+                <option value="N">No</option>
               </select>
-              <input type="text" name="condition" id="condition"
-                     placeholder="Condition" onfocus="this.select()"
+              <input type="text" name="CentralAir" id="CentralAir"
+                     placeholder="CentralAir" onfocus="this.select()"
                      style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
-              <input name="condition" id="condition" type="hidden">
+              <input name="CentralAir" id="CentralAir" type="hidden">
             </div>
-            <input type="text" placeholder="Squared Feet Above" name="sqft_above" style="width: 9%;">
-            <input type="text" placeholder="Squared Feet Basement" name="sqft_basement" style="width: 9%;">
-            <input type="text" placeholder="Year Built" name="yr_built" style="width: 9%;">
-            <input type="text" placeholder="Year Renovated" name="yr_renovated" style="width: 9%;">
-            <input type="text" placeholder="Latitude" name="lat" style="width: 9%;">
-            <input type="text" placeholder="Longitude" name="long" style="width: 9%;">
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
-                      onchange="document.getElementById('classifer').value=this.options[this.selectedIndex].text; document.getElementById('classifer').value=this.options[this.selectedIndex].value;">
+
+            <input type="text" placeholder="Nº Bedrooms" name="BedroomAbvGr" style="width: 6%;">
+            <input type="text" placeholder="Nº Kitchens" name="KitchenAbvGr" style="width: 6%;">
+            <input type="text" placeholder="Nº Fireplaces" name="Fireplaces" style="width: 6%;">
+            <input type="text" placeholder="Garage Area" name="GarageArea" style="width: 7%;">
+            <input type="text" placeholder="Pool Area" name="PoolArea" style="width: 7%;">
+
+
+            <div style="display: inline;position:relative;width:300px;height:27px;border:0;padding-top:-5px;margin-top:-5px;line-height:20px;margin-right:0px;"">
+              <select style="position:absolute;top:-5px;left:0px;width:250px; height:27px;line-height:30px;margin:0;padding:0;"
+                      onchange="document.getElementById('predictive').value=this.options[this.selectedIndex].text; document.getElementById('predictive').value=this.options[this.selectedIndex].value;">
                 <option></option>
-                <option value="Ensemble Method">Simple Regression</option>
-                <option value="Naive Bayes">Polinomial Regression</option>
-                <option value="Decision Tree">Random Forest</option>
-                <option value="Random Forest">Support Vector Machines</option>
-                <option value="K-Nearest Neighbour">Neural Networks</option>
+                <option value="Random Forest">Random Forest</option>
+                <option value="Ridge">Linear Regression + Ridge</option>
+                <option value="Lasso">Linear Regression + Lasso</option>
+                <option value="SVR">Support Vector Regressor</option>
+                <option value="GraBoost">GraBoost</option>
+                <option value="AdaBoost">AdaBoost</option>
+                <option value="XGB">XGBoost</option>
+                <option value="CAT">CATBoost</option>
+                <option value="bagging">Bagging</option>
+                <option value="stacking">Stacking</option>
+                <option value="blending_2_best">Ensemble Blend 2 Best</option>
+                <option value="blending_3_best">Ensemble Blend 3 Best</option>
+                <option value="blending_4_best">Ensemble Blend 4 Best</option>
+                <option value="voter_2_best">Ensemble Voter 2 Best</option>
+                <option value="voter_3_best">Ensemble Voter 3 Best</option>
+                <option value="voter_4_best">Ensemble Voter 4 Best</option>
+
+
               </select>
               <input type="text" name="predictive" id="predictive"
                      placeholder="Predictive Algorithm" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                     style="position:absolute;top:-5px;left:0px;width:230px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
               <input name="predictive" id="predictive" type="hidden">
             </div>
-            <button type="submit" class="btn btn-primary">Predict</button>
-		</form>
+            <button  style="display: inline; margin-left:260px;"type="submit" class="btn btn-primary" >Predict</button>
+        </form><form style="display: inline;" action="{{ url_for('compare_predictors')}}" method="POST"><button  style="display: inline; margin-left:-275px;"  type="submit" name="button1" class="btn btn-primary">Compare the Different Predictors</button></form>
 
-        <div>
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Bedrooms: </u>Positive Integer
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Bathrooms: </u>Positive Integer
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Square Feet Living: </u>Positive Float
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Square Feet Lot: </u>Positive Float
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Floors: </u>Positive Integer
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Waterfront: </u>Yes or No
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>View: </u>Positive Integer 1-5
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Square Feet Above: </u>Positive Float
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Year Built: </u>Square Feet Basement: Positive Float
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Year Built: </u>Positive Integer
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Year Renovated: </u>Positive Integer
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Latitude: </u>e.g. 47.5112
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Longitude: </u>e.g. -122.257
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Predictive Algorithm: </u>Simple Regression, Polinomial Regression, Random Forest, Support Vector Machines, Neural Networks
+
+        <div style="margin-left: 15px;">
+            <p style="line-height:12px;margin:0px;"><br></p> <b>Fields:</b>
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Lot Area:</u> Lot Area in Square Feet. Positive Integer.
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Street:</u>Condition of the street to access the house. It can be: 'Pave' or 'Gravel'
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Year Built:</u> Year of Contruction Completion (more than 1800 and less than 2020)
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>RoofStyle:</u> Type of roof. It can be one of the following: 'Gable', 'Hip', 'Gambrel', 'Mansard', 'Flat' or 'Shed'.
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Air Conditioner:</u> Does it have Air Conditioner? "Yes" or "No"
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Nº of Bedrooms:</u> Total Number of Bedrooms. Positive Integer (at least one).
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Nº of Kitchens:</u> Total Number of Kitchens. Positive Integer (at least one).
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Nº of Fireplaces:</u> Total Number of Fireplaces. Positive Integer.
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Garage Area:</u> Area of the garage in square feet. Positive Integer (0 if does not have a garage).
+            <p style="line-height:10px;margin:0px;"><br></p>| <u>Pool Area:</u> Area of the pool in square feet. Positive Integer (0 if does not have a pool).
+
+
+            <br></br>
+            <p style="line-height:10px;margin:0px;"><br></p> <b>Every time a field is not filled or it does not respect the boundary values, the algorithm will assume the mode values of the training dataset for each respective field. The default classifier will be the Random Forest Regressor.</b>
+            <p style="line-height:10px;margin:0px;"><br></p> <b>Detail of the code and all the analysis behind this app can be seen <a href="https://github.com/joelpires/predictML/blob/master/houses.ipynb">here</a>.</b>
+            <p style="line-height:10px;margin:0px;"><br></p> <b>The dataset that I used to train the algorithms was <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data">this</a>.</b>
+
         </div>
 
 

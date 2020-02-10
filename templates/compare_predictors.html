@@ -1,0 +1,100 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<b><a style="position: absolute;top: 0.3%;left: 13.5%;" href="{{ url_for('index') }}">Back to Home</a></b>
+<b><p style="font-size:130%; position: absolute;top: 2%;left: 0.5%;">Results of the Friedman and Nemenyi Statistical Tests Over 30 Runs of All the Algorithms</p></b>
+<textarea style="display: inline;position: absolute;top: 5%;left: 0%; overflow-y: scroll;
+	width: 33.3%;
+    height: 37.8%;">
+    {{prediction}} </textarea>
+
+
+<div>
+    <div style="
+    position: absolute;top: 0%;right: 33.2%;
+    width: 33.5%; /* width of container */
+    height: 43%; /* height of container */
+    overflow: hidden;
+    border: 5px solid black;
+    ">
+      <img
+      src="{{url_for('static', filename='results/house_prices/all_MAEs.png')}}" style="position: absolute;top: -4%;right: -6%;" width="110%" height="110%"
+
+    </div>
+</div>
+
+
+
+<div>
+    <div style="
+    position: absolute;top: 0%;right: 0%;
+    width: 33.4%; /* width of container */
+    height: 43%; /* height of container */
+    overflow: hidden;
+    border: 5px solid black;
+    ">
+      <img
+      src="{{url_for('static', filename='results/house_prices/all_MSEs.png')}}" style="position: absolute;top: -4%;right: -7.5%;" width="110%" height="110%"
+
+    </div>
+</div>
+
+
+
+<div>
+    <div style="
+    position: absolute;bottom: -0%;left: 0%;
+    width: 33.4%; /* width of container */
+    height: 57.2%; /* height of container */
+    overflow: hidden;
+    border: 5px solid black;
+    ">
+      <img
+      src="{{url_for('static', filename='results/house_prices/all_R2.png')}}" style="position: absolute;bottom: -4%;right: -8.5%;" width="112%" height="105%"
+
+    </div>
+</div>
+
+
+
+<div>
+    <div style="
+    position: absolute;bottom: -0%;right: 33.2%;
+    width: 33.5%; /* width of container */
+    height: 57.2%; /* height of container */
+    overflow: hidden;
+    border: 5px solid black;
+    ">
+      <img
+      src="{{url_for('static', filename='results/house_prices/all_RMSEs.png')}}" style="position: absolute;bottom: -4%;right: -8.5%;" width="112%" height="105%"
+
+    </div>
+</div>
+
+
+
+
+
+<div>
+    <div style="
+    position: absolute;bottom: -0%;right: 0%;
+    width: 33.3%; /* width of container */
+    height: 57.2%; /* height of container */
+    overflow: hidden;
+    border: 5px solid black;
+    margin: -50px 0px 0px -0px;
+    ">
+      <img
+      src="{{url_for('static', filename='results/house_prices/boxplot_mses.png')}}" style="position: absolute;bottom: -4%;right: -8.5%;" width="117%" height="113%"
+
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='css/styles.css')}}">
+{% endblock %}

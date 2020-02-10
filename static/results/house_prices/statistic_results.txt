@@ -1,0 +1,83 @@
+Algorithm CAT is statistically way much better than Gaussian
+Algorithm Elastic Net is statistically way much better than Gaussian
+Algorithm GraBoost is statistically way much better than Gaussian
+Algorithm CAT is statistically better than KNN
+Algorithm KNN is statistically way much better than Gaussian
+Algorithm CAT is statistically better than Lasso
+Algorithm Lasso is statistically way much better than Gaussian
+Algorithm Random Forest is statistically way much better than Gaussian
+Algorithm Random Forest is statistically way much better than KNN
+Algorithm Random Forest is statistically way much better than Lasso
+Algorithm CAT is statistically way much better than Ridge
+Algorithm Ridge is statistically way much better than Gaussian
+Algorithm Random Forest is statistically way much better than Ridge
+Algorithm SVR is statistically way much better than Gaussian
+Algorithm CAT is statistically way much better than Voter_2_best
+Algorithm Elastic Net is statistically way much better than Voter_2_best
+Algorithm Voter_2_best is statistically way much better than Gaussian
+Algorithm GraBoost is statistically way much better than Voter_2_best
+Algorithm KNN is statistically better than Voter_2_best
+Algorithm Lasso is statistically better than Voter_2_best
+Algorithm Random Forest is statistically way much better than Voter_2_best
+Algorithm SVR is statistically way much better than Voter_2_best
+Algorithm CAT is statistically way much better than Voter_3_best
+Algorithm Elastic Net is statistically way much better than Voter_3_best
+Algorithm GraBoost is statistically way much better than Voter_3_best
+Algorithm KNN is statistically way much better than Voter_3_best
+Algorithm Lasso is statistically way much better than Voter_3_best
+Algorithm Random Forest is statistically way much better than Voter_3_best
+Algorithm Ridge is statistically way much better than Voter_3_best
+Algorithm SVR is statistically way much better than Voter_3_best
+Algorithm CAT is statistically way much better than Voter_4_best
+Algorithm Elastic Net is statistically way much better than Voter_4_best
+Algorithm Voter_4_best is statistically way much better than Gaussian
+Algorithm GraBoost is statistically way much better than Voter_4_best
+Algorithm KNN is statistically better than Voter_4_best
+Algorithm Lasso is statistically better than Voter_4_best
+Algorithm Random Forest is statistically way much better than Voter_4_best
+Algorithm SVR is statistically way much better than Voter_4_best
+Algorithm XGB is statistically way much better than Gaussian
+Algorithm XGB is statistically way much better than Voter_2_best
+Algorithm XGB is statistically way much better than Voter_3_best
+Algorithm XGB is statistically way much better than Voter_4_best
+Algorithm CAT is statistically way much better than bagging
+Algorithm Elastic Net is statistically way much better than bagging
+Algorithm GraBoost is statistically way much better than bagging
+Algorithm KNN is statistically way much better than bagging
+Algorithm Lasso is statistically way much better than bagging
+Algorithm Random Forest is statistically way much better than bagging
+Algorithm Ridge is statistically way much better than bagging
+Algorithm SVR is statistically way much better than bagging
+Algorithm XGB is statistically way much better than bagging
+Algorithm CAT is statistically way much better than blending_2_best
+Algorithm Elastic Net is statistically way much better than blending_2_best
+Algorithm GraBoost is statistically way much better than blending_2_best
+Algorithm KNN is statistically way much better than blending_2_best
+Algorithm Lasso is statistically way much better than blending_2_best
+Algorithm Random Forest is statistically way much better than blending_2_best
+Algorithm Ridge is statistically way much better than blending_2_best
+Algorithm SVR is statistically way much better than blending_2_best
+Algorithm XGB is statistically way much better than blending_2_best
+Algorithm CAT is statistically way much better than blending_3_best
+Algorithm Elastic Net is statistically way much better than blending_3_best
+Algorithm GraBoost is statistically way much better than blending_3_best
+Algorithm KNN is statistically way much better than blending_3_best
+Algorithm Lasso is statistically way much better than blending_3_best
+Algorithm Random Forest is statistically way much better than blending_3_best
+Algorithm Ridge is statistically way much better than blending_3_best
+Algorithm SVR is statistically way much better than blending_3_best
+Algorithm XGB is statistically way much better than blending_3_best
+Algorithm CAT is statistically way much better than blending_4_best
+Algorithm Elastic Net is statistically way much better than blending_4_best
+Algorithm blending_4_best is statistically way much better than Gaussian
+Algorithm GraBoost is statistically way much better than blending_4_best
+Algorithm Random Forest is statistically way much better than blending_4_best
+Algorithm SVR is statistically way much better than blending_4_best
+Algorithm XGB is statistically way much better than blending_4_best
+Algorithm CAT is statistically way much better than stacking
+Algorithm Elastic Net is statistically better than stacking
+Algorithm stacking is statistically way much better than Gaussian
+Algorithm GraBoost is statistically way much better than stacking
+Algorithm Random Forest is statistically way much better than stacking
+Algorithm SVR is statistically way much better than stacking
+Algorithm XGB is statistically way much better than stacking
