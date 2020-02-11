@@ -328,7 +328,7 @@ def predict():
 		columns = numerical + pipeline.named_steps['preprocessor'].transformers_[1][1].named_steps['onehot'].get_feature_names(categorical).tolist()
 		features_transformed = pd.DataFrame(features_transformed.toarray(), columns=columns)
 
-		if classifier == 'stacking' or classifier == 'bagging': #HEROKU DOESN'T ALLOW ME TO EXECUTE THESE MODELS ONCE THEY EXCEED THE QUOTA LIMIT OF MEMORY USAGE FOR THE FREE PLAN -.-''
+		if predictor == 'stacking' or predictor == 'bagging': #HEROKU DOESN'T ALLOW ME TO EXECUTE THESE MODELS ONCE THEY EXCEED THE QUOTA LIMIT OF MEMORY USAGE FOR THE FREE PLAN -.-''
 			#stacking
 		    #myStack = joblib.load('./models/house_prices/stack_transformer.pkl')
 		    #S_features = myStack.transform(features_transformed)

@@ -12,8 +12,8 @@
       <div class="panel-body" >
 
       	<form action="{{ url_for('classify')}}" method="POST" style="display: inline;" >
-			<input type="text" placeholder="Age" style="width: 5%;" name="age">
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+			<input type="text" placeholder="Age" style="width: 5%; font-size: 110%;" name="age">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%; ">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('workclass').value=this.options[this.selectedIndex].text; document.getElementById('workclass').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -28,7 +28,7 @@
               </select>
               <input type="text" name="workclass" id="workclass"
                      placeholder="Workclass" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
 
 
@@ -39,7 +39,7 @@
 
 
 
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('education').value=this.options[this.selectedIndex].text; document.getElementById('education').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -62,13 +62,13 @@
               </select>
               <input type="text" name="education" id="education"
                      placeholder="Education" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
 
 
 
 
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('marital_status').value=this.options[this.selectedIndex].text; document.getElementById('marital_status').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -82,9 +82,9 @@
               </select>
               <input type="text" name="marital_status" id="marital_status"
                      placeholder="Marital Status" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('occupation').value=this.options[this.selectedIndex].text; document.getElementById('occupation').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -105,9 +105,9 @@
               </select>
               <input type="text" name="occupation" id="occupation"
                      placeholder="Occupation" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('race').value=this.options[this.selectedIndex].text; document.getElementById('race').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -119,9 +119,9 @@
               </select>
               <input type="text" name="race" id="race"
                      placeholder="Race" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('sex').value=this.options[this.selectedIndex].text; document.getElementById('sex').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -130,12 +130,12 @@
               </select>
               <input type="text" name="sex" id="sex"
                      placeholder="Sex" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
 
-            <input type="text" placeholder="Hours per Week" name="hours_per_week" style="width: 5%;">
+            <input type="text" placeholder="Hours per Week" name="hours_per_week" style="width: 5%; font-size: 110%;" >
 
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('native_country').value=this.options[this.selectedIndex].text; document.getElementById('native_country').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -182,9 +182,9 @@
               </select>
               <input type="text" name="native_country" id="native_country"
                      placeholder="Native Country" onfocus="this.select()"
-                  style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                  style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('classifier').value=this.options[this.selectedIndex].text; document.getElementById('classifier').value=this.options[this.selectedIndex].value;">
 
@@ -220,7 +220,7 @@
 
               <input type="text" name="classifier" id="classifier"
                      placeholder="Classifier" onfocus="this.select()"
-                   style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                   style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
             <button style="display: inline-block;margin-left:1%;" type="submit" name="namequery" class="btn btn-primary">Classify</button>
 
@@ -281,8 +281,8 @@
       <div class="panel-body" style="display: inline;" >
 
       	<form action="{{ url_for('predict')}}" method="POST" style="display: inline;margin-left: 0.6%; " >
-            <input type="text" placeholder="Lot Area" name="LotArea" style="width: 7%;">
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <input type="text" placeholder="Lot Area" name="LotArea" style="width: 7%; font-size: 110%;" >
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('Street').value=this.options[this.selectedIndex].text; document.getElementById('Street').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -291,14 +291,14 @@
               </select>
               <input type="text" name="Street" id="Street"
                      placeholder="Access Type" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
               <input name="Street" id="Street" type="hidden">
             </div>
 
 
-            <input type="text" placeholder="Year Built" name="YearBuilt" style="width: 7%;">
+            <input type="text" placeholder="Year Built" name="YearBuilt" style="width: 7%; font-size: 110%;" >
 
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('RoofStyle').value=this.options[this.selectedIndex].text; document.getElementById('RoofStyle').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -311,14 +311,14 @@
               </select>
               <input type="text" name="RoofStyle" id="RoofStyle"
                      placeholder="Roof Style" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
               <input name="RoofStyle" id="RoofStyle" type="hidden">
             </div>
 
 
 
 
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('CentralAir').value=this.options[this.selectedIndex].text; document.getElementById('CentralAir').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -327,18 +327,18 @@
               </select>
               <input type="text" name="CentralAir" id="CentralAir"
                      placeholder="CentralAir" onfocus="this.select()"
-                      style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                      style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
               <input name="CentralAir" id="CentralAir" type="hidden">
             </div>
 
-            <input type="text" placeholder="Nº Bedrooms" name="BedroomAbvGr" style="width: 6%;">
-            <input type="text" placeholder="Nº Kitchens" name="KitchenAbvGr" style="width: 6%;">
-            <input type="text" placeholder="Nº Fireplaces" name="Fireplaces" style="width: 6%;">
-            <input type="text" placeholder="Garage Area" name="GarageArea" style="width: 7%;">
-            <input type="text" placeholder="Pool Area" name="PoolArea" style="width: 7%;">
+            <input type="text" placeholder="Nº Bedrooms" name="BedroomAbvGr" style="width: 6%; font-size: 110%;" >
+            <input type="text" placeholder="Nº Kitchens" name="KitchenAbvGr" style="width: 6%; font-size: 110%;" >
+            <input type="text" placeholder="Nº Fireplaces" name="Fireplaces" style="width: 6%; font-size: 110%;" >
+            <input type="text" placeholder="Garage Area" name="GarageArea" style="width: 7%; font-size: 110%;" >
+            <input type="text" placeholder="Pool Area" name="PoolArea" style="width: 7%; font-size: 110%;" >
 
 
-            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('predictive').value=this.options[this.selectedIndex].text; document.getElementById('predictive').value=this.options[this.selectedIndex].value;">
                 <option></option>
@@ -363,7 +363,7 @@
               </select>
               <input type="text" name="predictive" id="predictive"
                      placeholder="Predictive Algorithm" onfocus="this.select()"
-                      style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
+                      style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
               <input name="predictive" id="predictive" type="hidden">
             </div>
             <button  style="display: inline-block;margin-left:1%;" type="submit" class="btn btn-primary" >Predict</button>
