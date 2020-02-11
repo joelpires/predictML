@@ -2,8 +2,8 @@
 {% block content %}
 <body style="background-color:#FFFFFF;">
 
-<div class="panel-heading" align="center" class="jumbotron" style="background-color:#E5E5FF !important; height: 72px; width: 100%; margin: 0;">
-    <h2 style="line-height: 30px;">Classify Annual Income of US Citizens Based on their Socio-Economic Information (<=50K or >50K dollars)</h2>
+<div class="panel-heading" align="center" class="jumbotron" style="background-color:#E5E5FF !important; width: 100%; margin: 0;">
+    <h1 style="line-height: 150%;font-size: 202%; "><b>Classify Annual Income of US Citizens Based on their Socio-Economic Information (<=50K or >50K dollars)</b></h1>
 </div>
 
 <div class="panel-group">
@@ -11,10 +11,10 @@
       <div class="panel-heading" style="background-color:#7F0000 ">Insert Features and the Chosen Classifier Algorithm:</div>
       <div class="panel-body" >
 
-      	<form action="{{ url_for('classify')}}" method="POST" style="display: inline-block;margin-right: -155px;" >
+      	<form action="{{ url_for('classify')}}" method="POST" style="display: inline;" >
 			<input type="text" placeholder="Age" style="width: 5%;" name="age">
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('workclass').value=this.options[this.selectedIndex].text; document.getElementById('workclass').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Private">Private</option>
@@ -28,10 +28,19 @@
               </select>
               <input type="text" name="workclass" id="workclass"
                      placeholder="Workclass" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+
+
+
+
+
+
+
+
+
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('education').value=this.options[this.selectedIndex].text; document.getElementById('education').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Preschool">Preschool</option>
@@ -53,10 +62,14 @@
               </select>
               <input type="text" name="education" id="education"
                      placeholder="Education" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+
+
+
+
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('marital_status').value=this.options[this.selectedIndex].text; document.getElementById('marital_status').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Married-­civ-­spouse">Married, Civilian Spouse</option>
@@ -69,10 +82,10 @@
               </select>
               <input type="text" name="marital_status" id="marital_status"
                      placeholder="Marital Status" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('occupation').value=this.options[this.selectedIndex].text; document.getElementById('occupation').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Tech-support">Tech Support</option>
@@ -92,10 +105,10 @@
               </select>
               <input type="text" name="occupation" id="occupation"
                      placeholder="Occupation" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('race').value=this.options[this.selectedIndex].text; document.getElementById('race').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="White">Caucasian</option>
@@ -106,10 +119,10 @@
               </select>
               <input type="text" name="race" id="race"
                      placeholder="Race" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('sex').value=this.options[this.selectedIndex].text; document.getElementById('sex').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Male">Male</option>
@@ -117,13 +130,13 @@
               </select>
               <input type="text" name="sex" id="sex"
                      placeholder="Sex" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
             </div>
 
             <input type="text" placeholder="Hours per Week" name="hours_per_week" style="width: 5%;">
 
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('native_country').value=this.options[this.selectedIndex].text; document.getElementById('native_country').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Cambodia">Cambodia</option>
@@ -169,10 +182,10 @@
               </select>
               <input type="text" name="native_country" id="native_country"
                      placeholder="Native Country" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                  style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
             </div>
-            <div style="display: inline-block;position:relative;width:220px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:220px; height:27px;line-height:20px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('classifier').value=this.options[this.selectedIndex].text; document.getElementById('classifier').value=this.options[this.selectedIndex].value;">
 
                 <option></option>
@@ -207,37 +220,29 @@
 
               <input type="text" name="classifier" id="classifier"
                      placeholder="Classifier" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:200px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                   style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
             </div>
-            <button style="display: inline-block;margin-left:5px;" type="submit" name="namequery" class="btn btn-primary">Classify</button>
+            <button style="display: inline-block;margin-left:1%;" type="submit" name="namequery" class="btn btn-primary">Classify</button>
 
-		</form>
-
-        <form style="display: inline-block;margin-left:-5px;" action="{{ url_for('compare_classifiers')}}" method="POST"><button   type="submit" name="button1" class="btn btn-primary">Compare the Different Classifiers</button></form>
-
-
-
-
-
-
+		</form><form style="display: inline-block;" action="{{ url_for('compare_classifiers')}}" method="POST"><button tyle="display: inline-block;"  type="submit" name="button1" class="btn btn-primary">Compare the Different Classifiers</button></form>
 
         <div>
-            <p style="line-height:12px;margin:0px;"><br></p> <b>Fields:</b>
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Age:</u> Positive Integer (0-99)
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Workclass:</u> Private, Self Employed Not Incorporated, Self Employed Incorporated, Federal Government, Local Government, State Government, Without Pay, Never Worked
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Education:</u> Preschool, 1st-4th, 5th-6th, 7th-8th, 9th, 10th, 11th, 12th, High School Graduated, Professor at School, Associate Acdm, Associate Voc, Some College, Bachelors, Masters, Doctorate
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Marital Status:</u> Married, Civilian Spouse, Married, Air Force Spouse, Married but spouse ­absent, Divorced, Never Married, Separated, Widowed
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Occupation:</u> Tech Support, Craft Repair, Armed Forces, Sales, Executive/Management, Handlers/Cleaners, Machine Inspector, Clerical, Farming/Fishing, Transport Moving, Profissional Specialty, Private House Service, Protective Service, Other Service
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Race:</u> Caucasian, African, Asian/Pacific/Islander, American/Indian/Eskimo, Other.
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Sex:</u> Female, Male.
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Hours per Week:</u> Positive Integer (0-50)
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Native country:</u> United-­States, Cambodia, England, Puerto ­Rico, Canada, Germany, Outlying­ US(Guam-­USVI-­etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El­ Salvador, Trinadad&Tobago, Peru, Hong, Holand­-Netherlands
+            <p style="line-height:90%;margin:0%;"><br></p> <b>Fields:</b>
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Age:</u> Positive Integer (0-99)
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Workclass:</u> Private, Self Employed Not Incorporated, Self Employed Incorporated, Federal Government, Local Government, State Government, Without Pay, Never Worked
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Education:</u> Preschool, 1st-4th, 5th-6th, 7th-8th, 9th, 10th, 11th, 12th, High School Graduated, Professor at School, Associate Acdm, Associate Voc, Some College, Bachelors, Masters, Doctorate
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Marital Status:</u> Married, Civilian Spouse, Married, Air Force Spouse, Married but spouse ­absent, Divorced, Never Married, Separated, Widowed
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Occupation:</u> Tech Support, Craft Repair, Armed Forces, Sales, Executive/Management, Handlers/Cleaners, Machine Inspector, Clerical, Farming/Fishing, Transport Moving, Profissional Specialty, Private House Service, Protective Service, Other Service
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Race:</u> Caucasian, African, Asian/Pacific/Islander, American/Indian/Eskimo, Other.
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Sex:</u> Female, Male.
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Hours per Week:</u> Positive Integer (0-50)
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Native country:</u> United-­States, Cambodia, England, Puerto ­Rico, Canada, Germany, Outlying­ US(Guam-­USVI-­etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El­ Salvador, Trinadad&Tobago, Peru, Hong, Holand­-Netherlands
 
 
             <br></br>
-            <p style="line-height:10px;margin:0px;"><br></p> <b>Every time a field is not filled or it does not respect the boundary values, the algorithm will assume the mode values of the US census for each respective field. The default classifier will be the Random Forest Classifier.</b>
-            <p style="line-height:10px;margin:0px;"><br></p> <b>Detail of the code and all the analysis behind this app can be seen <a href="https://github.com/joelpires/predictML/blob/master/census.ipynb">here</a>.</b>
-            <p style="line-height:10px;margin:0px;"><br></p> <b>The dataset that I used to train the algorithms was <a href="https://archive.ics.uci.edu/ml/datasets/Adult">this</a>.</b>
+            <p style="line-height:85%;margin:0%;"><br></p> <b>Every time a field is not filled or it does not respect the boundary values, the algorithm will assume the mode values of the US census for each respective field. The default classifier will be the Random Forest Classifier.</b>
+            <p style="line-height:85%;margin:0%;"><br></p> <b>Detail of the code and all the analysis behind this app can be seen <a href="https://github.com/joelpires/predictML/blob/master/census.ipynb">here</a>.</b>
+            <p style="line-height:85%;margin:0%;"><br></p> <b>The dataset that I used to train the algorithms was <a href="https://archive.ics.uci.edu/ml/datasets/Adult">this</a>.</b>
 
         </div>
 
@@ -267,18 +272,18 @@
 
 
 
-<div class="panel-heading" align="center" class="jumbotron" style="background-color:#E5E5FF !important; height: 80px; width: 100%; margin: 0;">
-    <h2 style="line-height: 45px;">Predict the Price of US Citizens' Houses Based on their Features</h2>
+<div class="panel-heading" align="center" class="jumbotron" style="background-color:#E5E5FF !important; width: 100%; margin: 0;">
+    <h1 style="line-height: 150%;font-size: 202%; "><b>Predict the Price of US Citizens' Houses Based on their Features</b></h1>
 </div>
 <div class="panel-group">
     <div class="panel panel-primary">
       <div class="panel-heading" style="background-color:#7F0000 ">Insert Features and the Chosen Predictive Algorithm:</div>
       <div class="panel-body" style="display: inline;" >
 
-      	<form action="{{ url_for('predict')}}" method="POST" style="display: inline-block;margin-left: 15px; " >
+      	<form action="{{ url_for('predict')}}" method="POST" style="display: inline;margin-left: 0.6%; " >
             <input type="text" placeholder="Lot Area" name="LotArea" style="width: 7%;">
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('Street').value=this.options[this.selectedIndex].text; document.getElementById('Street').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Pave">Pave</option>
@@ -286,15 +291,15 @@
               </select>
               <input type="text" name="Street" id="Street"
                      placeholder="Access Type" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
               <input name="Street" id="Street" type="hidden">
             </div>
 
 
             <input type="text" placeholder="Year Built" name="YearBuilt" style="width: 7%;">
 
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('RoofStyle').value=this.options[this.selectedIndex].text; document.getElementById('RoofStyle').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Gable">Gable</option>
@@ -306,15 +311,15 @@
               </select>
               <input type="text" name="RoofStyle" id="RoofStyle"
                      placeholder="Roof Style" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
               <input name="RoofStyle" id="RoofStyle" type="hidden">
             </div>
 
 
 
 
-            <div style="display: inline-block;position:relative;width:200px;height:27px;border:0;padding-top:0;margin-top:0;line-height:20px;">
-              <select style="position:absolute;top:8px;left:0px;width:200px; height:27px;line-height:20px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('CentralAir').value=this.options[this.selectedIndex].text; document.getElementById('CentralAir').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Y">Yes</option>
@@ -322,7 +327,7 @@
               </select>
               <input type="text" name="CentralAir" id="CentralAir"
                      placeholder="CentralAir" onfocus="this.select()"
-                     style="position:absolute;top:8px;left:0px;width:183px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                      style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
               <input name="CentralAir" id="CentralAir" type="hidden">
             </div>
 
@@ -333,8 +338,8 @@
             <input type="text" placeholder="Pool Area" name="PoolArea" style="width: 7%;">
 
 
-            <div style="display: inline;position:relative;width:300px;height:27px;border:0;padding-top:-5px;margin-top:-5px;line-height:20px;margin-right:0px;"">
-              <select style="position:absolute;top:-5px;left:0px;width:250px; height:27px;line-height:30px;margin:0;padding:0;"
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:0.75%;">
+              <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('predictive').value=this.options[this.selectedIndex].text; document.getElementById('predictive').value=this.options[this.selectedIndex].value;">
                 <option></option>
                 <option value="Random Forest">Random Forest</option>
@@ -358,31 +363,32 @@
               </select>
               <input type="text" name="predictive" id="predictive"
                      placeholder="Predictive Algorithm" onfocus="this.select()"
-                     style="position:absolute;top:-5px;left:0px;width:230px;width:180px\9;#width:180px;height:27px; height:27px\9;#height:27px;border:1px solid #556;"  >
+                      style="position:absolute;width:90%;border:0.5% solid #556;font-size: 100%;"  >
               <input name="predictive" id="predictive" type="hidden">
             </div>
-            <button  style="display: inline; margin-left:260px;"type="submit" class="btn btn-primary" >Predict</button>
-        </form><form style="display: inline;" action="{{ url_for('compare_predictors')}}" method="POST"><button  style="display: inline; margin-left:-275px;"  type="submit" name="button1" class="btn btn-primary">Compare the Different Predictors</button></form>
+            <button  style="display: inline-block;margin-left:1%;" type="submit" class="btn btn-primary" >Predict</button>
+        </form><form style="display: inline;" action="{{ url_for('compare_predictors')}}" method="POST"><button  style="display: inline-block;"  type="submit" name="button1" class="btn btn-primary">Compare the Different Predictors</button></form>
 
 
-        <div style="margin-left: 15px;">
-            <p style="line-height:12px;margin:0px;"><br></p> <b>Fields:</b>
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Lot Area:</u> Lot Area in Square Feet. Positive Integer.
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Street:</u>Condition of the street to access the house. It can be: 'Pave' or 'Gravel'
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Year Built:</u> Year of Contruction Completion (more than 1800 and less than 2020)
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>RoofStyle:</u> Type of roof. It can be one of the following: 'Gable', 'Hip', 'Gambrel', 'Mansard', 'Flat' or 'Shed'.
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Air Conditioner:</u> Does it have Air Conditioner? "Yes" or "No"
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Nº of Bedrooms:</u> Total Number of Bedrooms. Positive Integer (at least one).
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Nº of Kitchens:</u> Total Number of Kitchens. Positive Integer (at least one).
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Nº of Fireplaces:</u> Total Number of Fireplaces. Positive Integer.
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Garage Area:</u> Area of the garage in square feet. Positive Integer (0 if does not have a garage).
-            <p style="line-height:10px;margin:0px;"><br></p>| <u>Pool Area:</u> Area of the pool in square feet. Positive Integer (0 if does not have a pool).
+
+        <div style="margin-left: 0.6%;">
+            <p style="line-height:90%;margin:0%;"><br></p> <b>Fields:</b>
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Lot Area:</u> Lot Area in Square Feet. Positive Integer.
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Street:</u>Condition of the street to access the house. It can be: 'Pave' or 'Gravel'
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Year Built:</u> Year of Contruction Completion (more than 1800 and less than 2020)
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>RoofStyle:</u> Type of roof. It can be one of the following: 'Gable', 'Hip', 'Gambrel', 'Mansard', 'Flat' or 'Shed'.
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Air Conditioner:</u> Does it have Air Conditioner? "Yes" or "No"
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Nº of Bedrooms:</u> Total Number of Bedrooms. Positive Integer (at least one).
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Nº of Kitchens:</u> Total Number of Kitchens. Positive Integer (at least one).
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Nº of Fireplaces:</u> Total Number of Fireplaces. Positive Integer.
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Garage Area:</u> Area of the garage in square feet. Positive Integer (0 if does not have a garage).
+            <p style="line-height:85%;margin:0%;"><br></p>| <u>Pool Area:</u> Area of the pool in square feet. Positive Integer (0 if does not have a pool).
 
 
             <br></br>
-            <p style="line-height:10px;margin:0px;"><br></p> <b>Every time a field is not filled or it does not respect the boundary values, the algorithm will assume the mode values of the training dataset for each respective field. The default classifier will be the Random Forest Regressor.</b>
-            <p style="line-height:10px;margin:0px;"><br></p> <b>Detail of the code and all the analysis behind this app can be seen <a href="https://github.com/joelpires/predictML/blob/master/houses.ipynb">here</a>.</b>
-            <p style="line-height:10px;margin:0px;"><br></p> <b>The dataset that I used to train the algorithms was <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data">this</a>.</b>
+            <p style="line-height:85%;margin:0%;"><br></p> <b>Every time a field is not filled or it does not respect the boundary values, the algorithm will assume the mode values of the training dataset for each respective field. The default classifier will be the Random Forest Regressor.</b>
+            <p style="line-height:85%;margin:0%;"><br></p> <b>Detail of the code and all the analysis behind this app can be seen <a href="https://github.com/joelpires/predictML/blob/master/houses.ipynb">here</a>.</b>
+            <p style="line-height:85%;margin:0%;"><br></p> <b>The dataset that I used to train the algorithms was <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data">this</a>.</b>
 
         </div>
 
