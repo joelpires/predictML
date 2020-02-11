@@ -3,6 +3,7 @@
 <body style="background-color:#FFFFFF;">
 
 <div class="panel-heading" align="center" class="jumbotron" style="background-color:#E5E5FF !important; width: 100%; margin: 0;">
+
     <h1 style="line-height: 150%;font-size: 202%; "><b>Classify Annual Income of US Citizens Based on their Socio-Economic Information (<=50K or >50K dollars)</b></h1>
 </div>
 
@@ -243,7 +244,7 @@
             <p style="line-height:85%;margin:0%;"><br></p> <b>Every time a field is not filled or it does not respect the boundary values, the algorithm will assume the mode values of the US census for each respective field. The default classifier will be the Random Forest Classifier.</b>
             <p style="line-height:85%;margin:0%;"><br></p> <b>Detail of the code and all the analysis behind this app can be seen <a href="https://github.com/joelpires/predictML/blob/master/census.ipynb">here</a>.</b>
             <p style="line-height:85%;margin:0%;"><br></p> <b>The dataset that I used to train the algorithms was <a href="https://archive.ics.uci.edu/ml/datasets/Adult">this</a>.</b>
-
+            <p style="line-height:85%;margin:0%;"><br></p> <b><u>DISCLAIMER: Some models might cause the server to crash (more common in ensemble methods) due to the fact that they might demand a quantity of memory that exceeds the free plan for Heroku servers.</u></b>
         </div>
 
 
@@ -355,9 +356,9 @@
                 <option value="blending_2_best">Ensemble Blend 2 Best</option>
                 <option value="blending_3_best">Ensemble Blend 3 Best</option>
                 <option value="blending_4_best">Ensemble Blend 4 Best</option>
-                <option value="voter_2_best">Ensemble Voter 2 Best</option>
-                <option value="voter_3_best">Ensemble Voter 3 Best</option>
-                <option value="voter_4_best">Ensemble Voter 4 Best</option>
+                <option value="Voter_2_best">Ensemble Voter 2 Best</option>
+                <option value="Voter_3_best">Ensemble Voter 3 Best</option>
+                <option value="Voter_4_best">Ensemble Voter 4 Best</option>
 
 
               </select>
@@ -389,7 +390,7 @@
             <p style="line-height:85%;margin:0%;"><br></p> <b>Every time a field is not filled or it does not respect the boundary values, the algorithm will assume the mode values of the training dataset for each respective field. The default classifier will be the Random Forest Regressor.</b>
             <p style="line-height:85%;margin:0%;"><br></p> <b>Detail of the code and all the analysis behind this app can be seen <a href="https://github.com/joelpires/predictML/blob/master/houses.ipynb">here</a>.</b>
             <p style="line-height:85%;margin:0%;"><br></p> <b>The dataset that I used to train the algorithms was <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data">this</a>.</b>
-
+<p style="line-height:85%;margin:0%;"><br></p> <b><u>DISCLAIMER: Some models might cause the server to crash (more common in ensemble methods) due to the fact that they might demand a quantity of memory that exceeds the free plan for Heroku servers.</u></b>
         </div>
 
 
