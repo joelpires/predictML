@@ -134,4 +134,4 @@ It covers ML that can go from the basic concepts to the most advanced ones. All 
 
 ### Making Pipelines and Prepare to Predict on new Data
 
-#### Deployment of the ML Models in an Web App Online
+### Deployment of the ML Models in an Web App Online
