@@ -1,7 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
 # PredictML
 
 It is a Flask powered web app that classifies the income based on socio-economic information of US citizens and also predicts house prices of their houses based on their conditions.
