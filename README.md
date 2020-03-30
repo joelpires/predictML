@@ -56,7 +56,7 @@ It covers ML that can go from the basic concepts to the most advanced ones. All 
 
 ### Classifiers
 - **Base Learners**
-    - **Ranfom Forest**
+    - **Random Forest**
     - **Decision Tree**
     - **Naive Bayes**
     - **K-Nearest Neighbour**
@@ -79,7 +79,7 @@ It covers ML that can go from the basic concepts to the most advanced ones. All 
 
 ### Regressors
 - **Base Learners**
-    - **Ranfom Forest**
+    - **Random Forest**
     - **Linear Regression + Ridge**
     - **Linear Regression + Lasso**
     - **Support Vector Regressor**
