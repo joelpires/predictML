@@ -13,7 +13,11 @@
       <div class="panel-body" >
 
       	<form action="{{ url_for('classify')}}" method="POST" style="display: inline;" >
+		<div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
+
 			<input type="text" placeholder="Age" style="width: 5%; font-size: 110%;" name="age">
+
+            	</div>
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%; ">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('workclass').value=this.options[this.selectedIndex].text; document.getElementById('workclass').value=this.options[this.selectedIndex].value;">
@@ -133,8 +137,13 @@
                      placeholder="Sex" onfocus="this.select()"
                      style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
+		
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            <input type="text" placeholder="Hours per Week" name="hours_per_week" style="width: 5%; font-size: 110%;" >
+            	<input type="text" placeholder="Hours per Week" name="hours_per_week" style="width: 5%; font-size: 110%;" >
+
+            </div>
+		
 
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
@@ -282,7 +291,11 @@
       <div class="panel-body" style="display: inline;" >
 
       	<form action="{{ url_for('predict')}}" method="POST" style="display: inline;margin-left: 0.6%; " >
-            <input type="text" placeholder="Lot Area" name="LotArea" style="width: 7%; font-size: 110%;" >
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
+
+            	<input type="text" placeholder="Lot Area" name="LotArea" style="width: 7%; font-size: 110%;" >
+
+            </div>
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
                       onchange="document.getElementById('Street').value=this.options[this.selectedIndex].text; document.getElementById('Street').value=this.options[this.selectedIndex].value;">
@@ -296,8 +309,11 @@
               <input name="Street" id="Street" type="hidden">
             </div>
 
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            <input type="text" placeholder="Year Built" name="YearBuilt" style="width: 7%; font-size: 110%;" >
+            	<input type="text" placeholder="Year Built" name="YearBuilt" style="width: 7%; font-size: 110%;" >
+
+            </div>
 
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
@@ -331,12 +347,31 @@
                       style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
               <input name="CentralAir" id="CentralAir" type="hidden">
             </div>
+            <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            <input type="text" placeholder="Nº Bedrooms" name="BedroomAbvGr" style="width: 6%; font-size: 110%;" >
-            <input type="text" placeholder="Nº Kitchens" name="KitchenAbvGr" style="width: 6%; font-size: 110%;" >
-            <input type="text" placeholder="Nº Fireplaces" name="Fireplaces" style="width: 6%; font-size: 110%;" >
-            <input type="text" placeholder="Garage Area" name="GarageArea" style="width: 7%; font-size: 110%;" >
-            <input type="text" placeholder="Pool Area" name="PoolArea" style="width: 7%; font-size: 110%;" >
+            	<input type="text" placeholder="Nº Bedrooms" name="BedroomAbvGr" style="width: 6%; font-size: 110%;" >
+
+            </div>
+	    <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
+
+            	<input type="text" placeholder="Nº Kitchens" name="KitchenAbvGr" style="width: 6%; font-size: 110%;" >
+
+            </div>
+	    <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
+
+            	<input type="text" placeholder="Nº Fireplaces" name="Fireplaces" style="width: 6%; font-size: 110%;" >
+
+            </div>
+	    <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
+
+            	<input type="text" placeholder="Garage Area" name="GarageArea" style="width: 7%; font-size: 110%;" >
+
+            </div>
+	    <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
+
+            	<input type="text" placeholder="Pool Area" name="PoolArea" style="width: 7%; font-size: 110%;" >
+
+            </div>
 
 
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
