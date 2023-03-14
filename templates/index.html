@@ -33,7 +33,7 @@
               </select>
               <input type="text" name="workclass" id="workclass"
                      placeholder="Workclass" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                     style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
 
 
@@ -67,7 +67,7 @@
               </select>
               <input type="text" name="education" id="education"
                      placeholder="Education" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                     style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
 
 
@@ -87,7 +87,7 @@
               </select>
               <input type="text" name="marital_status" id="marital_status"
                      placeholder="Marital Status" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                     style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
@@ -110,7 +110,7 @@
               </select>
               <input type="text" name="occupation" id="occupation"
                      placeholder="Occupation" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                     style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
@@ -124,7 +124,7 @@
               </select>
               <input type="text" name="race" id="race"
                      placeholder="Race" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                     style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
@@ -135,7 +135,7 @@
               </select>
               <input type="text" name="sex" id="sex"
                      placeholder="Sex" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                     style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
 		
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
@@ -192,7 +192,7 @@
               </select>
               <input type="text" name="native_country" id="native_country"
                      placeholder="Native Country" onfocus="this.select()"
-                  style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                  style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
             </div>
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
               <select style="position:absolute;width:100%;font-size: 155%;"
@@ -234,7 +234,7 @@
             </div>
             <button style="display: inline-block;margin-left:1%;" type="submit" name="namequery" class="btn btn-primary">Classify</button>
 
-		</form><form style="display: inline-block;" action="{{ url_for('compare_classifiers')}}" method="POST"><button tyle="display: inline-block;"  type="submit" name="button1" class="btn btn-primary">Compare the Different Classifiers</button></form>
+		</form><form style="display: inline-block; margin-top:0.2%" action="{{ url_for('compare_classifiers')}}" method="POST"><button tyle="display: inline-block;"  type="submit" name="button1" class="btn btn-primary">Compare the Different Classifiers</button></form>
 
         <div>
             <p style="line-height:90%;margin:0%;"><br></p> <b>Fields:</b>
@@ -403,7 +403,7 @@
               <input name="predictive" id="predictive" type="hidden">
             </div>
             <button  style="display: inline-block;margin-left:1%;" type="submit" class="btn btn-primary" >Predict</button>
-        </form><form style="display: inline;" action="{{ url_for('compare_predictors')}}" method="POST"><button  style="display: inline-block;"  type="submit" name="button1" class="btn btn-primary">Compare the Different Predictors</button></form>
+        </form><form style="display: inline; margin-top:0.2%" action="{{ url_for('compare_predictors')}}" method="POST"><button  style="display: inline-block;"  type="submit" name="button1" class="btn btn-primary">Compare the Different Predictors</button></form>
 
 
 
