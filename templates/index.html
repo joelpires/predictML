@@ -15,7 +15,7 @@
       	<form action="{{ url_for('classify')}}" method="POST" style="display: inline;" >
 		<div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-			<input type="text" placeholder="Age" style="width: 5%; font-size: 110%;" name="age">
+			<input type="text" placeholder="Age" style="position:absolute;width:100%;border:0.5% solid #556;font-size: 110%;" name="age">
 
             	</div>
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%; ">
@@ -140,7 +140,7 @@
 		
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            	<input type="text" placeholder="Hours per Week" name="hours_per_week" style="width: 5%; font-size: 110%;" >
+            	<input type="text" placeholder="Hours per Week" name="hours_per_week" style="position:absolute;width:100%;border:0.5% solid #556;font-size: 110%;" >
 
             </div>
 		
@@ -293,7 +293,7 @@
       	<form action="{{ url_for('predict')}}" method="POST" style="display: inline;margin-left: 0.6%; " >
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            	<input type="text" placeholder="Lot Area" name="LotArea" style="width: 7%; font-size: 110%;" >
+            	<input type="text" placeholder="Lot Area" name="LotArea" style="position:absolute;width:100%;border:0.5% solid #556;font-size: 110%;" >
 
             </div>
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
@@ -305,13 +305,13 @@
               </select>
               <input type="text" name="Street" id="Street"
                      placeholder="Access Type" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                     style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
               <input name="Street" id="Street" type="hidden">
             </div>
 
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            	<input type="text" placeholder="Year Built" name="YearBuilt" style="width: 7%; font-size: 110%;" >
+            	<input type="text" placeholder="Year Built" name="YearBuilt" style="position:absolute;width:100%;border:0.5% solid #556;font-size: 110%;" >
 
             </div>
 
@@ -328,7 +328,7 @@
               </select>
               <input type="text" name="RoofStyle" id="RoofStyle"
                      placeholder="Roof Style" onfocus="this.select()"
-                     style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                     style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
               <input name="RoofStyle" id="RoofStyle" type="hidden">
             </div>
 
@@ -344,32 +344,32 @@
               </select>
               <input type="text" name="CentralAir" id="CentralAir"
                      placeholder="CentralAir" onfocus="this.select()"
-                      style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                      style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
               <input name="CentralAir" id="CentralAir" type="hidden">
             </div>
             <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            	<input type="text" placeholder="Nº Bedrooms" name="BedroomAbvGr" style="width: 6%; font-size: 110%;" >
+            	<input type="text" placeholder="Nº Bedrooms" name="BedroomAbvGr" style="position:absolute;width:100%;border:0.5% solid #556;font-size: 110%;" >
 
             </div>
 	    <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            	<input type="text" placeholder="Nº Kitchens" name="KitchenAbvGr" style="width: 6%; font-size: 110%;" >
+            	<input type="text" placeholder="Nº Kitchens" name="KitchenAbvGr" style="position:absolute;width:100%;border:0.5% solid #556;font-size: 110%;" >
 
             </div>
 	    <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            	<input type="text" placeholder="Nº Fireplaces" name="Fireplaces" style="width: 6%; font-size: 110%;" >
+            	<input type="text" placeholder="Nº Fireplaces" name="Fireplaces" style="position:absolute;width:100%;border:0.5% solid #556;font-size: 110%;" >
 
             </div>
 	    <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            	<input type="text" placeholder="Garage Area" name="GarageArea" style="width: 7%; font-size: 110%;" >
+            	<input type="text" placeholder="Garage Area" name="GarageArea" style="position:absolute;width:100%;border:0.5% solid #556;font-size: 110%;" >
 
             </div>
 	    <div style="display: inline-block;position:relative;width:8%;border:0;padding-top:0%;margin-top:0%;margin-bottom:1.05%;">
 
-            	<input type="text" placeholder="Pool Area" name="PoolArea" style="width: 7%; font-size: 110%;" >
+            	<input type="text" placeholder="Pool Area" name="PoolArea" style="position:absolute;width:100%;border:0.5% solid #556;font-size: 110%;" >
 
             </div>
 
@@ -399,7 +399,7 @@
               </select>
               <input type="text" name="predictive" id="predictive"
                      placeholder="Predictive Algorithm" onfocus="this.select()"
-                      style="position:absolute;width:90%;border:0.5% solid #556;font-size: 110%;"  >
+                      style="position:absolute;width:85%;border:0.5% solid #556;font-size: 110%;"  >
               <input name="predictive" id="predictive" type="hidden">
             </div>
             <button  style="display: inline-block;margin-left:1%;" type="submit" class="btn btn-primary" >Predict</button>
