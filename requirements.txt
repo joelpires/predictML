@@ -10,7 +10,7 @@ MarkupSafe==1.1.1
 pandas==1.5.3
 python-dateutil==2.8.1
 pytz==2020.1
-scikit-learn==1.0.2
+scikit-learn==0.22.1
 scipy==1.10.1
 numpy==1.24.1
 six==1.14.0
