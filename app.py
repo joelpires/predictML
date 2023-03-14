@@ -3,7 +3,7 @@ from flask_bootstrap import Bootstrap
 import pandas as pd
 import numpy as np
 
-from sklearn.externals import joblib
+import joblib
 
 
 app = Flask(__name__)
