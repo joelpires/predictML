@@ -141,7 +141,6 @@ It covers ML that can go from the basic concepts to the most advanced ones. All 
 
 ```python
 """
-October 2019
 Author: Joel Pires
 """
 
